@@ -1,0 +1,28 @@
+name: ${project.name}
+version: ${project.version}
+description: ${project.description}
+main: ${plugin.mainClass}
+commands:
+  selltheloot:
+    aliases: [stl]
+    description: Set, change or clear a sell shop.
+    permission: selltheloot.reload
+    usage: "Usage: /<command>\n  reload§7 -- Reloads configuration for SellTheLoot"
+depend: [Vault]
+permissions:
+    selltheloot.*:
+        description: Give access to most SellTheLoot commands.
+        children:
+            selltheloot.use: true
+            selltheloot.setup: true
+            selltheloot.reload: true
+        default: op
+    selltheloot.use:
+        description: Whether a player can use a sell shop.
+        default: op
+    selltheloot.setup:
+        description: Whether a player can create, modify or clear sell shops.
+        default: op
+    selltheloot.reload:
+        description: Whether a player can reload SellTheLoad.
+        default: op

@@ -1,0 +1,24 @@
+shops:
+    example shop:
+        # Shown above the chest interface when selling. Defaults to the shop name.
+        title: Example Shop
+        # How much enchantments should increase the value per level.
+        # Possible enchantments (overriding default) are defined in http://jd.bukkit.org/rb/doxygen/dd/d17/classorg_1_1bukkit_1_1enchantments_1_1Enchantment.html
+        multipliers:
+            # This would increase the profit on sword by 1.8 times in case of a Sharp 5 Knockback 2 Fire Aspect 2 Unbreaking 3
+            # Use numbers below zero to decrease profit. Maybe 0.95 for Bane of Arthropods, no one needs that...
+            default: 1.05
+
+        # The items you want to allow selling
+        # Use id or id:data as format, where id can be a number or one as defined in http://jd.bukkit.org/rb/doxygen/d6/d0e/enumorg_1_1bukkit_1_1Material.html
+        items:
+            IRON_SWORD: 200
+            GOLDEN_APPLE:1: 500 # Notch apply only
+blacklist:
+    colored-names: true # Whether items with color in the names should not be sellable.
+    custom-names: false # Whether items with custom names should not be sellable. (Includes items named by anvils)
+    lore: true # Whether items with a lore should not be sellable
+receipt:
+    enabled: true
+    show-rejected: true
+    author: SellTheLoot
