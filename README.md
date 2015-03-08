@@ -1,0 +1,2 @@
+# SellTheLoot
+Sell loot. Easily
